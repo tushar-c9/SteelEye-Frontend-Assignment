@@ -5,6 +5,7 @@
 * List functional component returns other component i.e. SingleListItem and pass some data as props into it.
 * This internal "SingleListItem" component used for adding functionality to "items" i.e. change colour green and red on the basis of "isSelected" variable which is set        using useState hook and passed as prop into this internal component.
 
+</br>
 
 <b>Q2: What problems / warnings are there with code?</b>
 
@@ -22,7 +23,7 @@ Problem 5:  Each child in a list should have a unique "key" prop.
 
 Problem 6:  Invalid prop 'isSelected' of type 'boolean' supplied to `WrappedSingleListItem`, expected 'number'.
 
-
+</br>
 <b>Q3: Please fix, optimize, and/or modify the component as much as you think is necessary.</b>
 * removing dependecy "items" from useEffect hook.
 * Inside useState hook setting the function i.e. setSelectedIndex correctly.
