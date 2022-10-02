@@ -25,11 +25,17 @@ Problem 6:  Invalid prop 'isSelected' of type 'boolean' supplied to `WrappedSing
 
 </br>
 <b>Q3: Please fix, optimize, and/or modify the component as much as you think is necessary.</b>
+
 * removing dependecy "items" from useEffect hook.
+
 * Inside useState hook setting the function i.e. setSelectedIndex correctly.
+
 * Adding items i.e. "item1", "item2" that are passed further as props into the list component.
+
 * putting "onClickHandler" function inside arrow function which invokes this function only by clicking on the items.
+
 * Adding unique key prop to singleListItem component.
+
 * Setting "isSelected" prop-type to number instead of boolean.
 
 
