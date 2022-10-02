@@ -15,7 +15,7 @@ const WrappedSingleListItem = ({ index, isSelected, onClickHandler, text }) => {
 
 WrappedSingleListItem.propTypes = {
   index: PropTypes.number,
-  isSelected: PropTypes.bool,
+  isSelected: PropTypes.number,
   onClickHandler: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired
 };
@@ -24,10 +24,10 @@ const SingleListItem = memo(WrappedSingleListItem);
 
 // List Component
 const WrappedListComponent = ({ items }) => {
-  const [selectedIndex, setSelectedIndex] = useState(Boolean);
+  const [selectedIndex, setSelectedIndex] = useState();
 
   useEffect(() => {
-    setSelectedIndex(true);
+    setSelectedIndex(null);
   }, []);
 
   const handleClick = (index) => {
@@ -36,7 +36,7 @@ const WrappedListComponent = ({ items }) => {
 
   return (
     <ul style={{ textAlign: "left" }}>
-      {items?.map((item, index) => (
+      {items.map((item, index) => (
         <SingleListItem
           onClickHandler={() => handleClick(index)}
           text={item.text}
@@ -58,8 +58,7 @@ WrappedListComponent.propTypes = {
 };
 
 WrappedListComponent.defaultProps = {
-  // items: null
-  items: [{ text: "item1" }, { text: "item2" }, { text: "item3" }]
+  items: [{ text: "item1" }, { text: "item2" }]
 };
 
 const List = memo(WrappedListComponent);
